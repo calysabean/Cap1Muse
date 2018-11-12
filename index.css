@@ -1,0 +1,183 @@
+* {
+ box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  background:url('Museum.jpg') no-repeat center fixed;
+}
+
+h1 {
+  width: 100%;
+  background: black;
+  color: white;
+  text-align: left;
+  position: fixed;
+  margin: 0px;
+  top: 0px;
+  padding: 10px;
+}
+
+button {
+  display: block;
+  color: white;
+  width: 100px;
+  padding-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+      outline: none;
+cursor: pointer
+}
+
+button:hover {
+  color: white;
+
+}
+
+
+
+.landingBox {
+background: rgba(192, 192, 192, 0.4);
+width: 90%;
+height: 100px;
+margin-top: 50px;
+margin-right: auto;
+margin-left: auto;
+margin-bottom: 20px;
+padding-top: 8px;
+
+}
+
+.gallery {
+  width: 90%;
+  height: 200px;
+  background: rgba(128,128,128, 0.8);
+  border-radius: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+text-align: center;
+font-size: 50px;
+padding-top: 20px;
+color: white;
+cursor: pointer;
+
+}
+
+.gallery:hover {
+  background: rgba(255,255,255, 0.8);
+  color: black;
+
+}
+
+.hiddenForm {
+display:none;
+width: 90%;
+margin-top: 300px;
+margin-left: auto;
+margin-right:auto;
+background:rgba(128,128,0, 0.8);	
+}
+
+/*.js-search-results {
+  display: hidden;
+}*/
+
+.submitButton {
+display: none;
+  position: fixed;
+  margin-left: 80%;
+  margin-top: 10px;
+}
+
+form {
+text-align: center;
+}
+
+.submit {
+  height: 50px;
+  width: 300px;
+  background: black;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+.formCss {
+  text-align: center;
+  color: white;
+}
+
+.submitButton {
+  background: white;
+  color: black;
+  height: 100px;
+  width: 100px;
+  left: 20px;
+}
+input[type=text] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+legend {
+  color: white;
+}
+
+img {
+  margin-top: 20px;
+  height: 700px;
+  width: 50%;
+}
+  
+  /*.row {
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+Clearfix 
+.row::before,
+.row::after {
+  display: table;
+  content: '';
+}
+
+.row::after {
+  clear: both;
+}
+
+.col-3, .col-4, .col-6, .col-12 {
+  float: left;
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+  width: 100%;
+}
+
+
+For Larger Non-mobile Screens 
+
+
+@media only screen and (min-width: 640px) {
+
+  .col-3 {
+    width: 25%;
+  }
+  
+  .col-4 {
+    width: 33.33%;
+  }
+  
+  .col-6 {
+    width: 50%;
+  }
+  
+  .col-12 {
+    width: 100%;
+  }
+}

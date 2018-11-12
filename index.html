@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Muse</title>
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+        <link href="index.css" rel="stylesheet" type="text/css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+      <main role="main">
+        <section>
+          <nav role="navigation">
+            <h1>Muse</h1> 
+          </nav>
+        <div class="landingBox">
+          <button class="gallery">Explore Muesuems</button>
+          </div>
+        </section>
+        <section>
+          <div class="hiddenForm">
+          <form role="form" action="https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search? " method="get" class="js-search-form">
+          <legend>Enter search terms:</legend>
+            <label for="query"></label>
+            <input id="query" type="text" class="js-query" placeholder="Reinwick Gallery" required>
+            <label for="zipcode"></label>
+            <input id="zipcode" type="text" class="js-query1" placeholder="Type zip" required>
+            <button type="submit" class="submit">Search</button>
+          </form>
+         </div>
+         <div class="testClass">
+               <button type="submit" class="submitButton" data-panelid="panel1" >Get Results!</button>
+          <form class="js-search-results">
+         </form> 
+         </div>
+         </div>
+        </section>
+        <!--<button class="js-next-results next-results hidden">
+              More Results
+            </button>-->
+      </main>
+      <script src="index.js"></script>
+    </body>
+</html>
