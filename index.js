@@ -10,11 +10,11 @@ function getDataFromApi(searchTerm, locationTerm, callback) {
       categories: 'museums',
       sort_by: 'distance',
       limit: 50,
-      offset: 51
+      //offset: 51
 
     },
     headers: {
-    'Authorization': 'Bearer usiWT_1-4jpxhSQScBGLOPtIEVnKLaRuacCuAJ__zbFv1H2WtU8DNt8fS2Zt1yjUr9qZX-uIks5cDsLEIZBumIqc6gg7aivVK3kkbDTg_jLEUoVWxbzHCUYmsXrSW3Yx'
+    'Authorization': 'Bearer usiWT_1-4jpxhSQScBGLOPtIEVnKLaRuacCuAJ__zbFv1H2WtU8DNt8fS2Zt1yjUr9qZX-uIks5cDsLEIZBumIqc6gg7aivVK3kkbDTg_jLEUoVWxbzHCUYmsXrSW3Yx',
     },
     dataType: 'json',
     type: 'GET',
@@ -36,7 +36,7 @@ function homePage() {
 function displayResult(result) {
   return `
   <div class="col-6 formCss">
-    <a href="${result.url}" target="_blank"><img src="${result.image_url}"></a>
+    <a href="${result.url}" target="_blank"><img class="thumbnail-image" src="${result.image_url}"></a>
       <section class="formCss3">
     <p>${result.name}</p>
     <p>${result.location.display_address}</p>
@@ -84,7 +84,7 @@ function watchSubmit() {
     let queryTarget1 = $(event.currentTarget).find('.js-query1');
     let query = queryTarget.val();
     let query1 = queryTarget1.val();
-    queryTarget.val("");
+    queryTarget.val("museums");
     queryTarget1.val("");
     //console.log(event);
       showSubmitButton();  

@@ -16,8 +16,9 @@
         <section>
           <nav role="navigation">
             <h1>Muse</h1> 
-          </nav>
+          </nav> 
         <div class="landingBox">
+          <p>Whether  searching for inspiration or just looking to explore your history in an innovative way, the ‘Muse’ app is for you. Just enter your zip code and search for the closest museum in your area. It’s a fun and easy way to find a creative space for yourself, friends, and/or family to explore.</p>
           <button class="gallery">Explore Muesuems</button>
           </div>
         </section>
@@ -26,7 +27,7 @@
           <form role="form" action="https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search? " method="get" class="js-search-form">
           <legend>Enter search terms:</legend>
             <label for="query"></label>
-            <input id="query" type="text" class="js-query" placeholder="Reinwick Gallery" required>
+            <input id="query" type="text" class="js-query" value="musuem" style="display:none" required>
             <label for="zipcode"></label>
             <input id="zipcode" type="text" class="js-query1" placeholder="Type zip" required>
             <button type="submit" class="submit">Search</button>
@@ -34,7 +35,7 @@
          </div>
          <div class="testClass">
                <button type="submit" class="submitButton" data-panelid="panel1" >Get Results!</button>
-          <form class="js-search-results">
+          <form class="row js-search-results">
          </form> 
          </div>
          </div>
