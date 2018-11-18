@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+  <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -9,23 +9,26 @@
           integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
           crossorigin="anonymous"></script>
         <link href="index.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Josefin+Sans" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    </head>
-    <body>
-      <main role="main">
+      </head>
+    
+        <body>
+        <main role="main">
         <section>
           <nav role="navigation">
             <h1>Muse</h1> 
-          </nav> 
-        <div class="landingBox">
-          <p>Whether  searching for inspiration or just looking to explore your history in an innovative way, the ‘Muse’ app is for you. Just enter your zip code and search for the closest museum in your area. It’s a fun and easy way to find a creative space for yourself, friends, and/or family to explore.</p>
-          <button class="gallery">Explore Muesuems</button>
+          </nav>
+          <div class="landingBox">
+          <p>With the ‘Muse’ app just enter your zip code and search for the closest museum in your area. It’s a fun and easy way to find a creative space for yourself, friends, and/or family to explore. Click the button below!</p>
+          <button class="gallery">Click here! <br> Explore Museums!</button>
           </div>
         </section>
+        
         <section>
           <div class="hiddenForm">
           <form role="form" action="https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search? " method="get" class="js-search-form">
-          <legend>Enter search terms:</legend>
+          <legend>Search Local Museums!</legend>
             <label for="query"></label>
             <input id="query" type="text" class="js-query" value="musuem" style="display:none" required>
             <label for="zipcode"></label>
@@ -33,17 +36,16 @@
             <button type="submit" class="submit">Search</button>
           </form>
          </div>
+         
          <div class="testClass">
-               <button type="submit" class="submitButton" data-panelid="panel1" >Get Results!</button>
-          <form class="row js-search-results">
-         </form> 
+               <button type="submit" class="submitButton" data-panelid="panel1" >Click Me to filter selected!</button>
+        <div class="row js-search-results">
+        </div>  
          </div>
-         </div>
+
         </section>
-        <!--<button class="js-next-results next-results hidden">
-              More Results
-            </button>-->
       </main>
+
       <script src="index.js"></script>
     </body>
 </html>

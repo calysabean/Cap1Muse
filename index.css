@@ -1,5 +1,6 @@
 * {
  box-sizing: border-box;
+ font-family: 'Josefin Sans', sans-serif;
 }
 
 body {
@@ -17,13 +18,16 @@ h1 {
   top: 0px;
   padding: 10px;
   border-bottom: solid black;
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
 }
 
+/* Opening page div class including introduction and button*/
 .landingBox {
   background: rgb(255,255,255);
   width: 100%;
   height: 100px;
-  margin-top: 45px;
+  margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 20px;
@@ -31,8 +35,10 @@ h1 {
   padding-right: 20%;
   padding-left: 20%;
   padding-bottom: 100px;
+  font-size: 18px;
   }
 
+/* Default setting for any button element */
 button {
   display: block;
   color: white;
@@ -48,6 +54,7 @@ button:hover {
   color: white;
 }
 
+/* Opening page button class */
 .gallery {
   width: 90%;
   height: 200px;
@@ -68,57 +75,78 @@ button:hover {
   color: black;
 }
 
+/* second page div class for search input */
 .hiddenForm {
   display:none;
-  width: 90%;
-  margin-top: 300px;
+  width: 95%;
+  margin-top: 200px;
   margin-left: auto;
   margin-right:auto;
   background:rgba(128,128,0, 0.8);
+  padding-bottom: 5px;
 }
 
-/*.js-search-results {
-  display: hidden;
-}*/
-
+/* Button class for hiding and showing selected results*/
 .submitButton {
   display: none;
   position: fixed;
-  margin-left: 80%;
+  margin-left: 85%;
   margin-top: 10px;
+  background: red;
+  color: white;
+  height: 100px;
+  width: 100px;
+  left: 20px;
+  border-radius: 5%;
+}
+.submitButton:hover {
+  background: darkgray;
+  color: black;
 }
 
 form {
   text-align: center;
-
 }
+
+/* Search page button class */
 
 .submit {
   height: 50px;
   width: 300px;
   background: black;
   border-radius: 100px;
-
+  font-size: 20px;
 }
 
 button:hover {
   background: white;
   color: black;
 }
+
+/* Form template class */
 .formCss {
   text-align: center;
   color: black;
   background: white;
   width: 100%;
-  margin-top: 10px;
+  height: 500px;
+  border-right: solid;
+  border-width: thin;
 }
 
-.submitButton {
-  background: white;
-  color: black;
-  height: 100px;
-  width: 100px;
-  left: 20px;
+/*input on hidden form*/
+form.finalResults {
+  display: block;
+  position: relative;
+  right: 42%;
+  top: 60px;
+  width: 70px;
+  height: 40px;
+}
+
+.finalResults input[type="checkbox"] {
+  border: none;
+
 }
 
 input[type=text] {
@@ -128,68 +156,89 @@ input[type=text] {
   display: inline-block;
   border-radius: 100px;
   outline-style: none;
-
+  font-size: 14px;
 }
 
 legend {
   color: white;
+  padding-top: 10px;
 }
 
 img {
   margin-top: 20px;
-  height: 700px;
+  height: 200px;
   width: 50%;
 }
+
   
   .row {
-  max-width: 1000px;
- padding-left: 20px;
-  padding-right: 20px;
+  /*max-width: 1000px;*/
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
   margin: 0 auto;
 }
 
+/* Class for Images in hidden div*/
 .thumbnail-image {
   margin-bottom: 10px;
   display: block;
   width: 100%;
+  height: 250px;
 }
-
-/*Clearfix*/ 
-.row::before,
-.row::after {
-  display: table;
-  content: '';
-}
-
-.row::after {
-  clear: both;
-}
-
-.col-3, .col-4, .col-6, .col-12 {
+ 
+ .viewPort {
   float: left;
-  padding-left: 1.04166666%;
-  padding-right: 1.04166666%;
   width: 100%;
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-bottom: 1%;
+  margin-top: 1%;
+  border-radius: 5%;
 }
 
+/*For Desktop Screens*/
 
-/*For Larger Non-mobile Screens*/
-
-@media only screen and (min-width: 640px) {
-
-  .col-3 {
-    width: 25%;
-  }
+@media only screen and (min-width: 700px) {
   
-  .col-4 {
-    width: 33.33%;
-  }
-  
-  .col-6 {
+  .viewPort {
     width: 50%;
   }
+}
+
+/*For Mobile Screens*/
+@media only screen and (max-width: 699px) {
   
-  .col-12 {
-    width: 100%;
+  .landingBox {
+    height: 250px;
   }
+  .gallery {
+    width: 100%;
+    height: 247px;
+    padding-right: 1px;
+    padding-left: 1px;
+    margin-top: 40%;
+}
+form.finalResults {
+  right: 0%;
+  top: 10px;
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+}
+.viewPort {
+  margin-top: 25%;
+}
+.submitButton {
+  display: none;
+  position: fixed;
+  margin-left: 82%;
+  margin-top: 0px;
+  background: red;
+  color: white;
+  height: 80px;
+  width: 60px;
+  left: 0px;
+  border-radius: 5%;
+}
 }

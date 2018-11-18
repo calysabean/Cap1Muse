@@ -4,13 +4,11 @@ function getDataFromApi(searchTerm, locationTerm, callback) {
   const settings = {
     url: Yelp_SEARCH_URL,
     data: {
-      //key: 'hZqOo0Aj_JbEY46TQWJaHd1DEZ6Qq0gLtg2wukZJJY_B9yHcZ3rnY19ZnVc6UfKMxRtSBRa_0fZjIwHhLYlTZ05_87eSTOuTdgaiO9_cPqQSg6l0y3AA2Fb3cyLNW3Yx',
       q: `${searchTerm}`,
       location: `${locationTerm}`,
       categories: 'museums',
       sort_by: 'distance',
       limit: 50,
-      //offset: 51
 
     },
     headers: {
@@ -20,10 +18,10 @@ function getDataFromApi(searchTerm, locationTerm, callback) {
     type: 'GET',
     success: callback
   };
-  //console.log(settings);
 $.ajax(settings);
 }
 
+// Opening page, hide on click
 function homePage() { 
   $('.landingBox').on('click', function(event) {
   $('.landingBox').remove();
@@ -31,51 +29,48 @@ function homePage() {
 });
 }
 
-
-
+// Template for form
 function displayResult(result) {
+  let phoneFormat = result.phone.replace(/(\d{1})(\d{3})(\d{3})(\d{4})/, '$1-$2-$3-$4');
+  let phoneFormat2 = result.phone.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
   return `
-  <div class="col-6 formCss">
-    <a href="${result.url}" target="_blank"><img class="thumbnail-image" src="${result.image_url}"></a>
-      <section class="formCss3">
-    <p>${result.name}</p>
-    <p>${result.location.display_address}</p>
-    <p>${result.phone}</p> 
-    <p>${result.rating}</p>
-    <form class="finalResults">
+  <div class="viewPort formCss">
+  <section class="formCss3">
+  <form class="finalResults">
     <fieldset>
     <label for="answerOption">
     <input class="answerOption" type="checkbox" value="${result.name}" name="answer" >
     </label>
     </fieldset>
     </form>
+  <a href="${result.url}" target="_blank"><img class="thumbnail-image" src="${result.image_url}"></a>  
+    <p>${result.name}</p>
+    <p>${result.location.display_address}</p>
+    <p class="phone">${phoneFormat}</p> 
+    <p>Rating: ${result.rating}</p>
     </section>
   </div> 
   `;
 }
 
+// Display template
 function displayYelpSearchResults(data) {
  const searchResults = data.businesses.map((item, index) => displayResult(item));
  $('.js-search-results').html(searchResults);
- // render another div
 }
 
+// Search submit button on click hide any "not" clicked div's
 function selectedData(){
   $('.submitButton').on('click', function (event) {
     event.preventDefault();
-    console.log('hello');
 
-      // var values = new Array();
-$.each($("input[name='answer']:not(:checked)"), function() {
-  console.log('inside of each');
- // values.push($(this).val());
- 
+    $.each($("input[name='answer']:not(:checked)"), function() {
   $(this).closest('div').hide();
-});
+    });
     })
-  }
+    }
  
-
+ // Second page search button, process values and show submit button   
 function watchSubmit() {
   homePage();
   $('.js-search-form').submit(function( event ) {
@@ -86,13 +81,9 @@ function watchSubmit() {
     let query1 = queryTarget1.val();
     queryTarget.val("museums");
     queryTarget1.val("");
-    //console.log(event);
-      showSubmitButton();  
+    showSubmitButton();  
     getDataFromApi(query, query1, displayYelpSearchResults);
-    //selectedAnswer();
-
   });
-
 }
 
 function showSubmitButton() {
@@ -101,6 +92,6 @@ function showSubmitButton() {
 
 $(() => {
   watchSubmit();
+  /*phoneFormat()*/
   selectedData();
-  //finalPage();
 });
