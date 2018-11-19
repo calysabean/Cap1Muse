@@ -43,7 +43,7 @@ function displayResult(result) {
     </label>
     </fieldset>
     </form>
-  <a href="${result.url}" target="_blank"><img class="thumbnail-image" src="${result.image_url}"></a>  
+  <a href="${result.url}" target="_blank"><img class="thumbnail-image" src="${result.image_url}" onerror=this.src="StockMuseumPic.jpg" alt="Museum Picture"></a>  
     <p>${result.name}</p>
     <p>${result.location.display_address}</p>
     <p class="phone">${phoneFormat}</p> 
@@ -90,8 +90,15 @@ function showSubmitButton() {
   $('.submitButton').css('display', 'block');
 }
 
+function reloadHome() {
+
+  $('main').on('click', '.reloadButton', function (event) {
+    location.reload();
+  });
+}
+
 $(() => {
   watchSubmit();
-  /*phoneFormat()*/
   selectedData();
+  reloadHome() 
 });
