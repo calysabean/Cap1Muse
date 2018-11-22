@@ -3,7 +3,7 @@ With the ‘Muse’ app just enter your zip code and search for the closest muse
 # Live Link to App
 https://calysabean.github.io/Cap1Muse/
 # Motivation
-I wanted to create an app that made it easy for creatives to find local musuems. When visiting a city or when in your own city it can be difficult to find a creative space, so the "Muse" app makes it easy to locate/select museums, and then render a personalized list of your results.
+I wanted to create an app that made it easy for creatives to find local museums. When visiting a city or when in your own city it can be difficult to find a creative space, so the "Muse" app makes it easy to locate/select museums, and then render a personalized list of your results.
 # Screenshots
 Landing Page:
 ![landing page](screenShots/MuseLandingPage.png)
