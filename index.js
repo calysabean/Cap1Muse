@@ -32,7 +32,6 @@ function homePage() {
 // Template for form
 function displayResult(result) {
   let phoneFormat = result.phone.replace(/(\d{1})(\d{3})(\d{3})(\d{4})/, '$1-$2-$3-$4');
-  let phoneFormat2 = result.phone.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
   return `
   <div class="viewPort formCss">
   <section class="formCss3">
@@ -43,7 +42,7 @@ function displayResult(result) {
     </label>
     </fieldset>
     </form>
-  <a href="${result.url}" target="_blank"><img class="thumbnail-image" src="${result.image_url}" onerror=this.src="StockMuseumPic.jpg" alt="Museum Picture"></a>  
+    <a href="${result.url}" target="_blank"><img class="thumbnail-image" src="${result.image_url}" onerror=this.src="StockMuseumPic.jpg" alt="Museum Picture"></a>  
     <p>${result.name}</p>
     <p>${result.location.display_address}</p>
     <p class="phone">${phoneFormat}</p> 
