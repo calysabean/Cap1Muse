@@ -31,17 +31,19 @@
           <div class="hiddenForm">
           <form role="form" action="https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search? " method="get" class="js-search-form">
           <legend>Search Local Museums!</legend>
-            <label for="query"></label>
+            <label for="query">
             <input id="query" type="text" class="js-query" value="musuem" style="display:none" required>
-            <label for="zipcode"></label>
-            <input id="zipcode" type="text" class="js-query1" placeholder="Type zip" required>
+          </label>
+            <label for="zipcode">
+            <input id="zipcode" title="ZipCode Field" pattern="[0-9]{5}" type="text" class="js-query1" placeholder="Type zip" required>
+          </label>
             <button type="submit" class="submit">Search</button>
           </form>
          </div>
          
          <div class="testClass">
-               <button type="submit" class="submitButton" data-panelid="panel1" >Click Me to filter selected!</button>
-        <div class="row js-search-results">
+               <button type="submit" class="submitButton" data-panelid="panel1" >Click checkbox then click here!</button>
+        <div class="row js-search-results" aria-live="assertive">
         </div>  
          </div>
 

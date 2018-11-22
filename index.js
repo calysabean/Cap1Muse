@@ -39,7 +39,7 @@ function displayResult(result) {
   <form class="finalResults">
     <fieldset>
     <label for="answerOption">
-    <input class="answerOption" type="checkbox" value="${result.name}" name="answer" >
+    <input title="checkBox" class="answerOption" type="checkbox" value="${result.name}" name="answer" >
     </label>
     </fieldset>
     </form>
