@@ -17,3 +17,4 @@ Personalized Results Page:
 * HTML
 * CSS
 * JavaScript/jQuery
+* Uses the Yelp API
